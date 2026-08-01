@@ -9,3 +9,4 @@
 | GET | `/api/admin/work-orders` | 学习任务清单 |
 | GET | `/api/shopfloor/dashboard` | 工程师任务工作台 |
 | POST | `/api/shopfloor/work-orders/{id}/reports` | 提交学习结果 |
+| POST | `/api/admin/completion-risk` | 评估学习计划完成风险 |
