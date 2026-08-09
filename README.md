@@ -84,3 +84,7 @@ docker compose up --build
 | ![知华科技微信咨询二维码 1](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信咨询二维码 2](docs/images/zhuatech-wechat-consulting-2.png) |
 
 关键词：LMS 源码、企业培训系统、在线学习、课程管理、Java LMS、Vue LMS、知华科技、上海如静知华信息科技有限公司。
+
+## 岗位技能差距学习计划
+
+新增 `POST /api/lms/insights/skills-gap-plan`，比较员工当前能力与目标岗位要求，按技能优先级、差距和预计学时生成重点学习项、总学时和完成周期，输出 `READY / PLAN / URGENT`。适合用于岗位认证、转岗培养和年度人才发展计划。
