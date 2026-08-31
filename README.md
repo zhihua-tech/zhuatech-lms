@@ -88,3 +88,7 @@ docker compose up --build
 ## 岗位技能差距学习计划
 
 新增 `POST /api/lms/insights/skills-gap-plan`，比较员工当前能力与目标岗位要求，按技能优先级、差距和预计学时生成重点学习项、总学时和完成周期，输出 `READY / PLAN / URGENT`。适合用于岗位认证、转岗培养和年度人才发展计划。
+
+## 企业级合规培训认证
+
+新增 `POST /api/enterprise/lms/compliance-certification-gate`，检查必修完成度、成绩、身份、实操、制度签收和证书有效期，返回 `CERTIFIED / RENEWAL_DUE / BLOCKED`。详见 [合规认证说明](docs/ENTERPRISE_COMPLIANCE_CERTIFICATION.md)。
