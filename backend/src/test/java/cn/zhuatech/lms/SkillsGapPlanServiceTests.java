@@ -8,9 +8,15 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class SkillsGapPlanServiceTests {
     private final SkillsGapPlanService service = new SkillsGapPlanService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void prioritizesCriticalRoleSkillGaps() {
         var result = service.plan(new SkillsGapPlanService.Request("E1001", "解决方案架构师", 4, List.of(
@@ -23,6 +29,9 @@ class SkillsGapPlanServiceTests {
         assertEquals("架构设计", result.prioritySkills().getFirst());
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void recognizesRoleReadyEmployee() {
         var result = service.plan(new SkillsGapPlanService.Request("E1002", "实施顾问", 4, List.of(

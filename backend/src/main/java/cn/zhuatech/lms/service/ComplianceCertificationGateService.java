@@ -8,8 +8,14 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ComplianceCertificationGateService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Assessment assess(Request request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -30,13 +36,22 @@ public class ComplianceCertificationGateService {
         return new Assessment(Decision.CERTIFIED, true, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String enrollmentId, @NotBlank String courseCode,
                           boolean mandatory, @Min(0) @Max(100) int completionPercent,
                           @Min(0) @Max(100) int examScore,
                           @Min(0) @Max(100) int passingScore, boolean identityVerified,
                           boolean practicalAssessmentRequired, boolean practicalPassed,
                           boolean policyAcknowledged, @Min(0) int certificateExpiryDays) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Assessment(Decision decision, boolean compliant, List<String> blockers,
                              List<String> actions) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { CERTIFIED, RENEWAL_DUE, BLOCKED }
 }

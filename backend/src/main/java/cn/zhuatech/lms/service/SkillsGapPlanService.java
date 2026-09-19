@@ -11,8 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class SkillsGapPlanService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result plan(Request request) {
         List<GapItem> gaps = request.skills().stream().map(skill -> {
             int gap = Math.max(0, skill.targetLevel() - skill.currentLevel());
@@ -34,18 +40,30 @@ public class SkillsGapPlanService {
             criticalGaps, totalHours, durationWeeks, decision, prioritySkills);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String employeeNo, @NotBlank String targetRole,
                           @Min(1) int weeklyLearningHours,
                           @NotEmpty List<@Valid SkillLevel> skills) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record SkillLevel(@NotBlank String skillName,
                              @Min(0) @Max(100) int currentLevel,
                              @Min(0) @Max(100) int targetLevel,
                              @Min(1) @Max(5) int priority,
                              @Min(1) int estimatedLearningHours) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record GapItem(String skillName, int gap, int priority, int learningHours) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String employeeNo, String targetRole, int weightedGap,
                          int criticalGaps, int totalLearningHours, int durationWeeks,
                          String decision, List<String> prioritySkills) {}
